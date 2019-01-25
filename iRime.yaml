@@ -1,0 +1,77 @@
+#
+#
+#
+#自定义配置请用iRime.custom.yaml文件。不然如果iRime.yaml文件有更新的话配置会被覆盖；
+#
+#
+#
+#
+config_version: 1.4 #配置文件版本
+app_setting:
+    space_swipe_to_move: true #开启空格键盘移动光标
+    play_key_voice: false #开启键盘声
+    play_key_voice_name: "default.caf" #键盘声音文件,如果声音文件不存在或者没有开发访问权限，将播放系统声音。
+    play_key_voice_volume: 1.0 #键盘音量大小范围从0.0~1.0之间
+    impact_feedback: true #键盘震动反馈。这里只支持IOS10以上的系统，且只支持Taptic Engine技术的机型。
+    impact_feedback_style: "UIImpactFeedbackStyleLight" #UIImpactFeedbackStyleLight 轻   UIImpactFeedbackStyleMedium 中   UIImpactFeedbackStyleHeavy 高
+    swipe_just_insert_symbol: true #未开放
+    is_custom_key_font: false #键盘字体是否自字义
+    is_show_candidate_comment: true #反查开关
+    is_autom_fill_symbol: false #是否输入（ “ 等符号自动补全
+    is_open_host_app: false #是否点击键盘图标打开主程序
+    is_insert_symbol_auto_insert_candiate: false #是否输入符号时自动上屏
+    is_hide_mode_change: false #是否隐藏地球
+    current_chinese_type: 0 #是否繁体输出。
+    candidate_preedit_type: 1 #候择栏栏输入符号样式，1为正常上下结构，2为内嵌
+    is_open_word_association: true #打开联想词
+    is_show_select_input_icon: true #是否显示切换方案图标
+    keyboard_type: 0 #键盘类型：0 #为默认键盘，1为27键盘
+    portrait_keyboard_height_offset: 0 #坚屏键盘调试。最大增加40像素；
+    monitor_paste: 1 #候选栏显示剪贴板内容
+    candidate_tool_bar_is_show_emoji: 1 #显示emoji表情
+    candidate_tool_bar_is_show_schema_switcher: 1 #显示切换方案
+    candidate_tool_bar_is_show_pasteboard: 1 #显示剪贴板历史
+    is_text_replacement_on: false #是否启用系统文本替换
+    swipe_upper_to_rime: false #上滑是否交到rime,如果打开，只接受ASCII码。其它直接上屏
+    display_upper_text: true #是否显示上滑符
+    is_show_pop: true #是否显示字符预览
+style:
+    font_name: "default" #字体
+    candidate_font_size: 22.0 #修改栏字体大小
+    candidate_font_color: "0x000000" #候选字体颜色
+    candidate_height_font_color: "0x0080f8" #候选栏高亮字体颜色
+    numberboard_font_size: 26.0 #数字键盘字体大小
+    common_preedited_text_font_size: 12.0 #上下结构，上屏符字体大小
+# 键盘布局
+preset_keyboards:
+    default:
+        author: "iRime"
+        name: "26鍵"
+        keys:
+            #例子：- q : {lower_label: "q", upper_label: "Q", click: q, swipe_up_label: "1", swipe_up: 1, swipe_left_label: "一", swipe_left: "一", swipe_right_label: "一", swipe_right: "一"}
+            - "q" : {lower_label: "q", upper_label: "Q", click: "q", swipe_up_label: "1", swipe_up: "1", swipe_down_label: "一", swipe_down: "一"}
+            - "w" : {lower_label: "w", upper_label: "W", click: "w", swipe_up_label: "2", swipe_up: "2", swipe_down_label: "二", swipe_down: "二"}
+            - "e" : {lower_label: "e", upper_label: "E", click: "e", swipe_up_label: "3", swipe_up: "3", swipe_down_label: "三", swipe_down: "三"}
+            - "r" : {lower_label: "r", upper_label: "R", click: "r", swipe_up_label: "4", swipe_up: "4", swipe_down_label: "四", swipe_down: "四"}
+            - "t" : {lower_label: "t", upper_label: "T", click: "t", swipe_up_label: "5", swipe_up: "5", swipe_down_label: "五", swipe_down: "五"}
+            - "y" : {lower_label: "y", upper_label: "Y", click: "y", swipe_up_label: "6", swipe_up: "6", swipe_down_label: "六", swipe_down: "六"}
+            - "u" : {lower_label: "u", upper_label: "U", click: "u", swipe_up_label: "7", swipe_up: "7", swipe_down_label: "七", swipe_down: "七"}
+            - "i" : {lower_label: "i", upper_label: "I", click: "i", swipe_up_label: "8", swipe_up: "8", swipe_down_label: "八", swipe_down: "八"}
+            - "o" : {lower_label: "o", upper_label: "O", click: "o", swipe_up_label: "9", swipe_up: "9", swipe_down_label: "九", swipe_down: "九"}
+            - "p" : {lower_label: "p", upper_label: "P", click: "p", swipe_up_label: "0", swipe_up: "0", swipe_down_label: "〇", swipe_down: "〇"}
+            - "a" : {lower_label: "a", upper_label: "A", click: "a", swipe_up_label: "~", swipe_up: "～", swipe_down_label: "~", swipe_down: "~"}
+            - "s" : {lower_label: "s", upper_label: "S", click: "s", swipe_up_label: "/", swipe_up: "／", swipe_down_label: "/", swipe_down: "/"}
+            - "d" : {lower_label: "d", upper_label: "D", click: "d", swipe_up_label: "：", swipe_up: "：", swipe_down_label: ":", swipe_down: ":"}
+            - "f" : {lower_label: "f", upper_label: "F", click: "f", swipe_up_label: "；", swipe_up: "；", swipe_down_label: ";", swipe_down: ";"}
+            - "g" : {lower_label: "g", upper_label: "G", click: "g", swipe_up_label: "（", swipe_up: "（", swipe_down_label: "(", swipe_down: "("}
+            - "h" : {lower_label: "h", upper_label: "H", click: "h", swipe_up_label: "）", swipe_up: "）", swipe_down_label: ")", swipe_down: ")"}
+            - "j" : {lower_label: "j", upper_label: "J", click: "j", swipe_up_label: "@", swipe_up: "@", swipe_down_label: "@", swipe_down: "@"}
+            - "k" : {lower_label: "k", upper_label: "K", click: "k", swipe_up_label: "“", swipe_up: "“", swipe_down_label: '"', swipe_down: '"'}
+            - "l" : {lower_label: "l", upper_label: "L", click: "l", swipe_up_label: "”", swipe_up: "”", swipe_down_label: "''", swipe_down: "'"}
+            - "z" : {lower_label: "z", upper_label: "Z", click: "z", swipe_up_label: "-", swipe_up: "-", swipe_down_label: "-", swipe_down: "-"}
+            - "x" : {lower_label: "x", upper_label: "X", click: "x", swipe_up_label: "_", swipe_up: "_", swipe_down_label: "_", swipe_down: "_"}
+            - "c" : {lower_label: "c", upper_label: "C", click: "c", swipe_up_label: "#", swipe_up: "#", swipe_down_label: "#", swipe_down: "#"}
+            - "v" : {lower_label: "v", upper_label: "V", click: "v", swipe_up_label: "？", swipe_up: "？", swipe_down_label: "?", swipe_down: "?"}
+            - "b" : {lower_label: "b", upper_label: "B", click: "b", swipe_up_label: "！", swipe_up: "！", swipe_down_label: "!", swipe_down: "!"}
+            - "n" : {lower_label: "n", upper_label: "N", click: "n", swipe_up_label: "，", swipe_up: "，", swipe_down_label: ",", swipe_down: ","}
+            - "m" : {lower_label: "m", upper_label: "M", click: m, swipe_up_label: "。", swipe_up: "。", swipe_down_label: ".", swipe_down: "."}
